@@ -1,4 +1,4 @@
-# linux-script-ocamlfuse-aut0-backup
+# linux-script-ocamlfuse-auto-backup
 
 The paths in this script assume that it executes from home directory, and creates (and later overwrites) another shell script in /home/ called list-files-out.sh. 
 
