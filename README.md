@@ -7,7 +7,7 @@ Bash shell
 Ocamlfuse FUSE system for mounting Google Drive on Linux: https://www.omgubuntu.co.uk/2017/04/mount-google-drive-ocamlfuse-linux
 
 # Warning
-This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine. Google has a nice "Profiles" system to switch between accounts, and seems to be happy to fling multiple chucks of 15 Gb at you.
+This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine. Google has a nice "Profiles" system to switch between accounts, and seems to be happy to fling multiple chunks of 15 Gb at you.
 
 # Summary:
 This shell script looks up the last time it was run, and identifies the list of files (within a chosen directory - default = Documents) which have been modified since that time.
