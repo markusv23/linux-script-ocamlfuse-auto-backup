@@ -2,21 +2,21 @@
 
 When run, this shell script will automatically backup to Google Drive all files which have been modified or created since the last time it was run.
 
-# Prerequisites:
+# Prerequisites
 Bash shell
 Ocamlfuse FUSE system for mounting Google Drive on Linux: https://www.omgubuntu.co.uk/2017/04/mount-google-drive-ocamlfuse-linux
 
 # Warning
 This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine. Google has a nice "Profiles" system to switch between accounts, and seems to be happy to fling multiple chunks of 15 Gb at you.
 
-# Summary:
+# Summary
 This shell script looks up the last time it was run, and identifies the list of files (within a chosen directory - default = Documents) which have been modified since that time.
 The filepaths and names are concatenated with string constants in a Python sub-routine, in order to create a subsidiary shell script with Bash syntax for copying the files to a chosen destination in Google-Drive.
 An Ocamlfuse command is run to mount an account-labeled Google Drive.
-The subsidiary script is called to make the Bash copy commands from the source destinations to the mounted Google Drive
+The subsidiary script is called to make the Bash copy commands from the source destinations to the mounted Google Drive.
 Ocamlfuse then unmounts the Drive
 
-# Code structure:
+# Code structure
 
 The paths in this script assume that it executes from home directory, and creates (and later overwrites) another shell script in /home/ called list-files-out.sh. 
 
