@@ -7,13 +7,17 @@ Bash shell
 Ocamlfuse FUSE system for mounting Google Drive on Linux: https://www.omgubuntu.co.uk/2017/04/mount-google-drive-ocamlfuse-linux
 
 # Warning
-This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine. Google has a nice "Profiles" system to switch between accounts, and seems to be happy to fling multiple chunks of 15 Gb at you.
+This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine.<br /> Google has a nice "Profiles" system to switch between accounts.
 
 # Summary
 This shell script looks up the last time it was run, and identifies the list of files (within a chosen directory - default = Documents) which have been modified since that time.
+
 The filepaths and names are concatenated with string constants in a Python sub-routine, in order to create a subsidiary shell script with Bash syntax for copying the files to a chosen destination in Google-Drive.
+
 An Ocamlfuse command is run to mount an account-labeled Google Drive.
+
 The subsidiary script is called to make the Bash copy commands from the source destinations to the mounted Google Drive.
+
 Ocamlfuse then unmounts the Drive
 
 # Code structure
@@ -47,10 +51,10 @@ Install and set up Ocamlfuse: https://www.omgubuntu.co.uk/2017/04/mount-google-d
 
 Download this ocamlfuse-auto-backup-google-drive.sh shell script to directory-path/ , and make a sub-directory directory-path/google-drive-backup
 
-Change code to reflect your directory structure:
-line 41: edit home/user/Documents
-line 109: supply your gmail username (without the @gmail.com) and directory where you mount your Google Drive
-line 115: directory where you mount your Google Drive
+Change code to reflect your directory structure:<br />
+line 41: edit home/user/Documents<br />
+line 109: supply your gmail username (without the @gmail.com) and directory where you mount your Google Drive<br />
+line 115: directory where you mount your Google Drive<br />
 
-Give read/write permissions to auxiliary files in google-drive-backup/
-Make this script and list-files-out.sh executable
+Give read/write permissions to auxiliary files in google-drive-backup/<br />
+Make this script and list-files-out.sh executable<br />
