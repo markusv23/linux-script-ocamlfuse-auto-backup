@@ -9,6 +9,14 @@ Ocamlfuse FUSE system for mounting Google Drive on Linux: https://www.omgubuntu.
 # Warning
 This script accesses your Google Drive. Consider starting a new Google account for the purposes of backing up your desktop machine.<br /> Google has a nice "Profiles" system to switch between accounts.
 
+# Known issue
+File paths or names with spaces: this script will hang when these are encountered.<br />
+To overcome this I changed every incident of a space in my Documents directory to a hyphen by running the following command in the terminal<br />
+
+find -name "* *" -print0 | sort -rz |  while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /-}")"; done<br />
+
+I found the command in the forums and take no responsibility for its use.
+
 # Summary
 This shell script looks up the last time it was run, and identifies the list of files (within a chosen directory - default = Documents) which have been modified since that time.
 
